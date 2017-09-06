@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<plugin xmlns="http://apache.org/cordova/ns/plugins/1.0"
+        id="cordova-IDFV-plugin" version="0.2.3">
+    
+    <name>Identifier For Vendor Plugin</name>
+  <author>jadhavsoma</author>
+
+  <description>
+   This plugin makes possible to get the Identifier For Vendor code on iOS phonegap apps
+  </description>
+
+  <license>MIT</license>
+
+  <js-module src="www/IDFVPlugin.js" name="IDFVPlugin">
+      <clobbers target="IDFVPlugin" />
+  </js-module>
+
+  <engines>
+      <engine name="cordova" version="&gt;=3.0.0" />
+  </engines>
+
+    <platform name="ios">
+        <config-file target="config.xml" parent="/*">
+          <feature name="IDFVPlugin">
+            <param name="ios-package" value="IDFVPlugin"/>
+          </feature>
+        </config-file>
+
+        <source-file src="src/ios/IDFVPlugin.m" />
+        <header-file src="src/ios/IDFVPlugin.h" />
+
+    </platform>
+</plugin>
